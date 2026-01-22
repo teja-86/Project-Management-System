@@ -40,8 +40,7 @@ public class AppConfig {
                 CorsConfiguration config = new CorsConfiguration();
                 config.setAllowedOrigins(Arrays.asList(
                         "http://localhost:3000",
-                        "http://localhost:5173",
-                        "http://localhost:4200"
+                        "https://project-management-system-7o64z5nzn.vercel.app"
                 ));
 
                 config.setAllowedMethods(Collections.singletonList("*"));

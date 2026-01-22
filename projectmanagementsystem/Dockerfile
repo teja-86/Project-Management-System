@@ -15,7 +15,7 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 
 # Expose the port (Render sets PORT env automatically)
-EXPOSE 8080
+EXPOSE 5454
 
 # Run with remote profile (you can override via env var if needed)
 ENTRYPOINT ["java", "-jar", "app.jar", "--spring.profiles.active=${SPRING_PROFILES_ACTIVE:-remote}"]
