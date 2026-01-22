@@ -1,4 +1,4 @@
-import * as types from "./actionType";
+import * as types from "./ActionType.js";
 import axios from "axios";
 
 export const getUserSubscription = () => {
