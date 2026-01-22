@@ -5,7 +5,7 @@ export const getUserSubscription = () => {
     return async (dispatch) => {
         dispatch({type: types.GET_USER_SUBSCRIPTION_REQUEST});
         try {
-            const response = await axios.get("http://localhost:5454/api/subscription/user", {
+            const response = await axios.get("/api/subscription/user", {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem("jwt")}`,
                 },
@@ -29,7 +29,7 @@ export const upgradeSubscription = ({planType}) => {
     return async (dispatch) => {
         dispatch({type: types.UPGRADE_SUBSCRIPTION_REQUEST});
         try {
-            const response = await axios.patch("http://localhost:5454/api/subscription/upgrade", null, {
+            const response = await axios.patch("/api/subscription/upgrade", null, {
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem("jwt")}`,
                 },
